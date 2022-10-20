@@ -18,10 +18,6 @@ function init()
     return true
 end
 
-function recoverReq(name)
-    
-end
-
 print("Initializing...")
 if (init()) then
     print("Successfully Initialized!")
@@ -29,22 +25,32 @@ else
     error("Init failed")
 end
 
-while (true) do turnL(10) end
+-- Refuel if needed
+function checkFuel()
+    if (t.getFuelLevel() < t.getFuelLimit() * 0.5) then
+        refuel()
+    end
+end
+
+-- Empty inv if less than 4 empty slots
+function checkInv()
+    if (getNumEmpty() < 4) then
+        dumpInv()
+    end
+end
+
+-- Check both inv and fuel
+function checkInvAndFuel()
+    checkInv()
+    checkFuel()
+end
+
+
+-- Dig wall 5x5
+function digWall5()
+    mineWall(2)
+end
 
 while (true) do
-    t.forward()
-    print("Dumping Inv")
-    if (dumpInv()) then
-        print("Success")
-    else
-        print("Failed")
-    end
-    print("FuelLevel: ", t.getFuelLevel())
-    print("Refueling")
-    if (refuel()) then
-        print("Success")
-    else
-        print("Failed")
-    end
-    print("FuelLevel: ", t.getFuelLevel())
+    chain(digWall5, checkInvAndFuel, t.dig, t.forward)
 end
