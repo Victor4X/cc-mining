@@ -51,6 +51,6 @@ function digWall5()
     mineWall(2)
 end
 
-while (true) do
-    chain(digWall5, checkInvAndFuel, t.dig, t.forward)
-end
+chain(500, digWall5, checkInvAndFuel, t.dig, t.forward)
+
+chain(500, t.back)
