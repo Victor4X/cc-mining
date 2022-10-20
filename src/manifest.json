@@ -1,7 +1,7 @@
 {
   "files": {
     "programs/mine.lua": "aff330f991e9520ab649a0b7fca6ffb0bd0d43240e3b46abd8d1c223010d2b70",
-    "apis/miningLib.lua": "0b60b5052fbbd35e264f22ad9b3405ede4219a0b9c616cea75564ca5fa010ab0"
+    "apis/miningLib.lua": "8286b15a6bc7ceb3de3f6576eec888c2fbb5a34326f246f2942d3729df2fea3f"
   },
   "dependencies": [
     "Victor4X/cc-qol"
