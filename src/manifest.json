@@ -3,5 +3,7 @@
     "programs/mine.lua": "aff330f991e9520ab649a0b7fca6ffb0bd0d43240e3b46abd8d1c223010d2b70",
     "apis/miningLib.lua": "0b60b5052fbbd35e264f22ad9b3405ede4219a0b9c616cea75564ca5fa010ab0"
   },
-  "dependencies": []
+  "dependencies": [
+    "Victor4X/cc-qol"
+  ]
 }
