@@ -1,3 +1,4 @@
+require(settings.get("ghu.base") .. "core/apis/ghu")
 require("qol")
 
 -- Make sure all reqs are present
