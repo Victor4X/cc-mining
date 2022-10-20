@@ -1,6 +1,7 @@
 {
   "files": {
-    "-": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    "programs/mine.lua": "a99e2902a25fd21ef0d21a4fe31bc6e027d5ad626a18951cc82db101915ccee5",
+    "apis/miningLib.lua": "923b5bd3e337ebdd72505bd581d08ade6748dfb7bf8d46b101973896da84dc8e"
   },
   "dependencies": []
 }
