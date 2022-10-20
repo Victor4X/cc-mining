@@ -255,26 +255,30 @@ function dumpInv()
     return false
 end
 
--- Places charger and flux plug
+-- Places charger and flux point
 -- ret1: success bool
 function refuel()
-    t.digDown()
-    t.select(15)
-    t.placeDown()
+    -- Place point
     t.select(14)
     t.dig()
     t.forward()
     t.digDown()
     t.placeDown()
     t.back()
+    -- Place charger
+    t.digDown()
+    t.select(15)
+    t.placeDown()
     while(t.getFuelLevel() < t.getFuelLimit()) do
         sleep(0.2)
-    end 
+    end
+    -- Dig charger
+    t.digDown()
+    -- Dig point
+    t.select(14)
+    t.drop()
     t.forward()
     t.digDown()
     t.back()
-    t.select(15)
-    t.drop()
-    t.digDown()
     return true    
 end
